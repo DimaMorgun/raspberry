@@ -1,4 +1,4 @@
-const LIGHT_API_URL = 'http://localhost:5000/light';
+const LIGHT_ROUTE_API_URL = '/light';
 
 function tryUpdateStatus() {
     const request = new XMLHttpRequest();
@@ -7,7 +7,7 @@ function tryUpdateStatus() {
             updateLedStatus(this.responseText);
         }
     };
-    request.open('GET', LIGHT_API_URL);
+    request.open('GET', LIGHT_ROUTE_API_URL);
     request.send();
 }
 
@@ -31,7 +31,7 @@ function disableLight() {
 
 function callLightRequest(lightStatus) {
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", `/light/${lightStatus}`, true);
+    xhr.open("POST", `/${LIGHT_ROUTE_API_URL}/${lightStatus}`, true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
