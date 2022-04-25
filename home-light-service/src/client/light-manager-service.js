@@ -31,7 +31,7 @@ function disableLight() {
 
 function callLightRequest(lightStatus) {
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", `/${LIGHT_ROUTE_API_URL}/${lightStatus}`, true);
+    xhr.open("POST", `${LIGHT_ROUTE_API_URL}/${lightStatus}`, true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
