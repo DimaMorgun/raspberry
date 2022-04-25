@@ -1,0 +1,60 @@
+body,
+html {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: ivory;
+    border-bottom: 1px solid black;
+}
+
+header>a {
+    padding: 5px;
+    font-size: 19px;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    transition: .5s;
+}
+
+header>a:hover {
+    color: brown;
+    background-color: aqua;
+}
+
+.panel-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.panel {
+    width: 150px;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+.panel>.title {
+    text-align: center;
+}
+
+.panel>.info {
+    text-align: center;
+}
+
+.panel>.info>.enabled {
+    color: green;
+}
+
+.panel>.info>.disabled {
+    color: red;
+}
+
+.panel>.actions {
+    display: flex;
+    justify-content: space-between;
+}

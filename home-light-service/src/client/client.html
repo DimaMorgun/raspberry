@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <a href="/">Home</a>
+    </header>
+
+    <main>
+        <div class="panel-container">
+            <div class="panel">
+                <h3 class="title">Light</h3>
+                <p class="info">Status: <span id="light-status" class="disabled">disabled</span></p>
+                <div class="actions">
+                    <input type="button" value="enable" onclick="enableLight();">
+                    <input type="button" value="disable" onclick="disableLight();">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./light-manager-service.js"></script>
+</body>
+
+</html>
